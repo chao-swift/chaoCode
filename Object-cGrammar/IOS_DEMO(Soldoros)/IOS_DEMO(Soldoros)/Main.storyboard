@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--Net Status Controller-->
+        <scene sceneID="4KL-v7-vZp">
+            <objects>
+                <viewController storyboardIdentifier="netstatus" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yCH-tF-BOs" customClass="NetStatusController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gm3-fi-wBB"/>
+                        <viewControllerLayoutGuide type="bottom" id="wBm-yK-Pjj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kSF-ct-qhj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="www.qq.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRx-O6-5tv">
+                                <rect key="frame" x="246" y="62" width="108" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="108" id="0Nk-0q-rKt"/>
+                                    <constraint firstAttribute="height" constant="21" id="Drm-Sg-xbJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h38-RX-9Vt">
+                                <rect key="frame" x="235" y="91" width="131" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="131" id="Eqg-d9-bzE"/>
+                                    <constraint firstAttribute="height" constant="30" id="fAo-rn-ayX"/>
+                                </constraints>
+                                <state key="normal" title="测试网络连接状态">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="testNetStatus:" destination="yCH-tF-BOs" eventType="touchUpInside" id="Dya-uJ-7Em"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ScE-5t-czT">
+                                <rect key="frame" x="251" y="207" width="98" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="FVB-PT-E6B"/>
+                                    <constraint firstAttribute="height" constant="30" id="Gig-vh-rm8"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="98" id="b3n-b9-WrX"/>
+                                </constraints>
+                                <state key="normal" title="检测Wifi">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="FVB-PT-E6B"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="testWift:" destination="yCH-tF-BOs" eventType="touchUpInside" id="IVc-pA-9Ti"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9I-1E-97Q">
+                                <rect key="frame" x="233" y="293" width="134" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2H5-RN-Pra"/>
+                                    <constraint firstAttribute="width" constant="66" id="fIh-pL-0SM"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="134" id="jhk-J5-hDP"/>
+                                </constraints>
+                                <state key="normal" title="检测2G/3G网络">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="fIh-pL-0SM"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="testInternet:" destination="yCH-tF-BOs" eventType="touchUpInside" id="oJi-Ra-j4s"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="fRx-O6-5tv" secondAttribute="centerX" id="6n6-ey-axU"/>
+                            <constraint firstAttribute="centerX" secondItem="R9I-1E-97Q" secondAttribute="centerX" id="7yd-CV-V4n"/>
+                            <constraint firstItem="h38-RX-9Vt" firstAttribute="top" secondItem="fRx-O6-5tv" secondAttribute="bottom" constant="8" id="B4a-3c-jDn"/>
+                            <constraint firstItem="ScE-5t-czT" firstAttribute="top" secondItem="h38-RX-9Vt" secondAttribute="bottom" constant="84" id="Mli-i2-vMg"/>
+                            <constraint firstAttribute="centerX" secondItem="h38-RX-9Vt" secondAttribute="centerX" id="Zi2-EL-6DO"/>
+                            <constraint firstItem="fRx-O6-5tv" firstAttribute="top" secondItem="gm3-fi-wBB" secondAttribute="bottom" constant="20" id="hVE-C4-Sn2"/>
+                            <constraint firstAttribute="centerX" secondItem="ScE-5t-czT" secondAttribute="centerX" id="ldj-zD-edA"/>
+                            <constraint firstItem="R9I-1E-97Q" firstAttribute="top" secondItem="ScE-5t-czT" secondAttribute="bottom" constant="58" id="w8i-aJ-iPV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="netLabel" destination="fRx-O6-5tv" id="Zmz-Ni-hah"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Pf-bh-vG2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="503" y="279"/>
+        </scene>
+    </scenes>
+</document>
